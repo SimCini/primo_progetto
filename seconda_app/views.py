@@ -12,3 +12,11 @@ def es_if(request):
 
 def index(request):
     return render(request, "index2.html")
+
+def if_else_elif(request):
+    context = {
+        'var1' : 100,
+        'var2' : 100.0,
+        'var3' : 100.50,
+    }
+    return render(request, "if_else_elif.html", context)
