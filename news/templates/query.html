@@ -1,0 +1,66 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Query varie {%endblock title%}
+
+ {%block content%}
+    <h4>1. Tutti gli articoli scritti da giornalisti di un certo cognome</h4>
+    <li>{{articoli_cognome}}</li>
+    <hr>
+    <h4>2. Numero totale di articoli</h4>
+    <p>{{numero_totale_articoli}}</p>
+    <hr>
+    <h4>3. Numero di articoli scritti da un giornalista specifico</h4>
+    <p>{{giornalista_1}}</p>
+    <hr>
+    <h4>4. Articoli ordinati per visualizzazioni</h4>
+    <li>{{articoli_ordinati}}</li>
+    <hr>
+    <h4>5. Articoli senza visualizzazioni</h4>
+    <li>{{articoli_senza_visualizzazioni}}</li>
+    <hr>
+    <h4>6. Articolo più visualizzato</h4>
+    <p>{{articolo_piu_visualizzato}}</p>
+    <hr>
+    <h4>7. Giornalisti nati dopo il 1990</h4>
+    <li>{{giornalisti_data}}</li>
+    <hr>
+    <h4>8. Articoli pubblicati il 1 gennaio 2023</h4>
+    <li>{{articoli_del_giorno}}</li>
+    <hr>
+    <h4>9. Articoli pubblicati nel 2023</h4>
+    <li>{{articoli_periodo}}</li>
+    <hr>
+    <h4>10. Articoli di giornalisti nati prima del 1980</h4>
+    <li>{{articoli_giornalisti}}</li>
+    <hr>
+    <h4>11. Giornalista più giovane</h4>
+    <p>{{giornalista_giovane}}</p>
+    <hr>
+    <h4>12. Giornalista più anziano</h4>
+    <p>{{giornalista_anziano}}</p>
+    <hr>
+    <h4>13. Ultimi 5 articoli pubblicati</h4>
+    <li>{{ultimi}}</li>
+    <hr>
+    <h4>14. Articoli con almeno 100 visualizzazioni</h4>
+    <li>{{articoli_minime_visualizzazioni}}</li>
+    <hr>
+    <h4>15. Articoli con la parola "importante" nel titolo</h4>
+    <li>{{articoli_parola}}</li>
+    <hr>
+    <h4>16. Articoli pubblicati in un determinato mese e anno</h4>
+    <li>{{articoli_mese_anno}}</li>
+    <hr>
+    <h4>17. Giornalisti con articoli popolari</h4>
+    <li>{{giornalisti_con_articoli_popolari}}</li>
+    <hr>
+    <h4>18. Articoli con AND</h4>
+    <li>{{articoli_con_and}}</li>
+    <hr>
+    <h4>19. Articoli con OR</h4>
+    <li>{{articoli_con_or}}</li>
+    <hr>
+    <h4>20. Articoli con NOT</h4>
+    <li>{{articoli_con_not}}</li>
+    <hr>
+
+ {%endblock content%}
