@@ -52,6 +52,8 @@ def articoloDetailView(request, pk):
 
 def giornalistaDetailView(request, pk):
     giornalista = get_object_or_404(Giornalista, pk=pk)
+    #Inserire controllo per recuperare gli articoli del giornalista e passarlo nel context
+    
     context = {"giornalista": giornalista}
     return render(request, "giornalista_detail.html", context)
 
@@ -175,3 +177,5 @@ def queryBase(request):
     }
 
     return render(request,'query.html',context)
+
+
