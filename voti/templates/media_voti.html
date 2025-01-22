@@ -2,7 +2,11 @@
 {%block title%} {{block.super}} | Media voti {%endblock title%}
 
 {%block content%}
-{% for studente in studenti %}
-    <!--Ciclare medie-->
-{% endfor %}
+
+<ul>
+    {% for key, value in medie.items %}
+        <li>{{key}}: {{value}}</li>
+    {% endfor %}
+</ul>
+
 {%endblock content%}
