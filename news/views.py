@@ -53,8 +53,11 @@ def articoloDetailView(request, pk):
 def giornalistaDetailView(request, pk):
     giornalista = get_object_or_404(Giornalista, pk=pk)
     #Inserire controllo per recuperare gli articoli del giornalista e passarlo nel context
-    
-    context = {"giornalista": giornalista}
+    articoli_giornalista = giornalista.articoli.all()
+    context = {
+                "giornalista": giornalista,
+                "articoli_giornalista": articoli_giornalista,
+            }
     return render(request, "giornalista_detail.html", context)
 
 def listaArticoli(request, pk=None):

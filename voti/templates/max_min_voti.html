@@ -2,5 +2,14 @@
 {%block title%} {{block.super}} | Max e Min {%endblock title%}
 
 {%block content%}
-
+<h2>Risultati</h2>
+<ul>
+    <li>Voto massimo: {{voto_max}} </li>
+    <li>Materie con voto massimo: {{materie_max}}</li>
+    <li>Studenti con voto massimo: {{studenti_max}}</li>
+    <br>
+    <li>Voto minimo: {{voto_min}}</li>
+    <li>Materie con voto minimo: {{materie_min}}</li>
+    <li>Studenti con voto minimo: {{studenti_min}}</li>
+</ul>
 {%endblock content%}

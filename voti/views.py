@@ -18,22 +18,26 @@ def lista_voti(request):
     return render(request, "lista_voti.html", context)
 
 def media_voti(request):
-    medie = []
+    medie = {}
+    studenti = []
     somma_voti=0
     for studente, voti_studente in voti.items():
+        studenti.append(studente)
         for materia, voto, assenze in voti_studente:
             somma_voti += voto
         numero_voti = len(voti_studente)
         media = somma_voti / numero_voti
         medie[studente] = media
-    context = {"medie": medie}
+    context = {"medie": medie,
+               "studenti": studenti,
+               }
     return render(request, "media_voti.html", context)
 
 def max_min(request):
     voto_max = 0
     materie_max = []
     studenti_max = []
-    voto_min = 0
+    voto_min = 10
     materie_min = []
     studenti_min = []
 
