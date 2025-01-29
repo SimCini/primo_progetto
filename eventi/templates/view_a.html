@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View_a{%endblock title%}
+
+ {%block content%}
+    <h3>Eventi in ordine cronologico:</h3>
+    <br>
+    <ul>
+        {% for evento in eventi_per_data%}
+            <li>{{evento}}</li>
+        {% endfor %}
+    </ul>
+ {%endblock content%}

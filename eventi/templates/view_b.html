@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View_b{%endblock title%}
+
+ {%block content%}
+    <h3>Tutti gli eventi:</h3>
+    <br>
+    <ul>
+        {% for evento in eventi%}
+            <p><strong>Titolo:</strong> {{evento.titolo}}</p>
+            <p><strong>Data:</strong> {{evento.data}}</p>
+            <p><strong>Descrizione:</strong> {{evento.descrizione}}</p>
+            <p><strong>Partecipanti:</strong> {{evento.partecipanti}}</p>
+            <hr>
+        {% endfor %}
+    </ul>
+ {%endblock content%}
