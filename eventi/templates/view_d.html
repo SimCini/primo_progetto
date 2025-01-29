@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View_c{%endblock title%}
+
+ {%block content%}
+    <h3>Evento migliore e peggiore:</h3>
+    <br>
+    <p><strong>Evento con più partecipanti:</strong></p>
+    <p>Titolo: {{max_titolo}}</p>
+    <p>Partecipanti: {{max_partecipanti}}</p>
+    <br>
+    <p><strong>Evento con meno partecipanti:</strong></p>
+    <p>Titolo: {{min_titolo}}</p>
+    <p>Partecipanti: {{min_partecipanti}}</p>
+ {%endblock content%}

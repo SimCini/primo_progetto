@@ -1,0 +1,9 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View_c{%endblock title%}
+
+ {%block content%}
+    <h3>Dati partecipanti:</h3>
+    <br>
+    <p>Numero totale di partecipanti: {{tot_partecipanti}}</p>
+    <p>Media di partecipanti per evento: {{media_partecipanti}}</p>
+ {%endblock content%}
