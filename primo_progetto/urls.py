@@ -28,6 +28,7 @@ urlpatterns = [
     path('news/',include("news.urls",namespace="news")),
     path('voti/',include("voti.urls",namespace="voti")),
     path('eventi/',include("eventi.urls",namespace="eventi")),
+    path('rubrica/',include("rubrica.urls",namespace="rubrica")),
     path('', index_root, name='index_root'),
 
 ]

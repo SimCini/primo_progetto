@@ -81,7 +81,7 @@ def queryBase(request):
     numero_articoli_giornalista_1 = Articolo.objects.filter(giornalista=giornalista_2).count()
 
     #4. Ordinare gli articoli per numero di visualizzazioni in ordine decrescente:
-    articoli_ordinati = Articolo.objects.order_by('-visualizzazioni').first()
+    articoli_ordinati = Articolo.objects.order_by('-visualizzazioni')
 
     #5. Tutti gli articoli che non hanno visualizzazioni:
     articoli_senza_visualizzazioni = Articolo.objects.filter(visualizzazioni=0)

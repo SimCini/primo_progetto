@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Contatto {{contatto.nome}} {%endblock title%}
+
+ {%block content%}
+    <h3>{{contatto.nome}}</h3>
+
+    <h5>Dettagli</h5>
+    <p>
+        <b>Nome: </b> {{contatto.nome}}<br>
+        <b>Telefono: </b> {{contatto.telefono}}<br>
+        <b>Email: </b> {{contatto.email}}<br>
+    </p>
+ {%endblock content%}

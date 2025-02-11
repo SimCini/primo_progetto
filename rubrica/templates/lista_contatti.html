@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Lista contatti {%endblock title%}
+
+ {%block content%}
+    <h2>Lista contatti:</h2>
+    <ul>
+        {% for  contatto in contatti %}
+            <li><a href="{% url 'rubrica:dettagli_contatto' contatto.id %}">{{contatto.nome}}</a></li>
+        {% endfor %}
+    </ul>
+ {%endblock content%}
