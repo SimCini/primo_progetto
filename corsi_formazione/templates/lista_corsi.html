@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Lista corsi {%endblock title%}
+
+ {%block content%}
+    <h2>Lista dei corsi</h2>
+    <br>
+    <ul>
+        {% for corso in corsi %}
+            <li><a href="{% url 'corsi_formazione:dettagli_corso' corso.id %}">{{corso.titolo}}</a></li>
+        {% endfor %}
+    </ul>
+ {%endblock content%}

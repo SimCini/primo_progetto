@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View d {%endblock title%}
+
+{%block content%}
+    <h3>Corsi con meno di 20 posti disponibili</h3>
+    <br>
+    <ul>
+        {% for corso in corsi_con_meno_20p %}
+            <li><a href="{% url 'corsi_formazione:dettagli_corso' corso.id %}">{{corso.titolo}}</a> - {{corso.posti_disponibili}} posti disponibili</li>
+        {% endfor %}
+    </ul>
+{%endblock content%}

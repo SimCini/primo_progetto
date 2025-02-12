@@ -13,9 +13,6 @@ def lista_contatti(request):
             }
     return render(request, "lista_contatti.html", context)
 
-def dettagli_contatto(request):
-    return render(request, "dettagli_contatto.html")
-
 def dettagli_contatto(request, pk):
     contatto = get_object_or_404(Contatto, pk=pk)
     context = {

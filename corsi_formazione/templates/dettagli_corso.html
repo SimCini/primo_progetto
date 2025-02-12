@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Dettagli {{corso.titolo}} {%endblock title%}
+
+ {%block content%}
+    <h1>{{corso.titolo}}</h1>
+    <p>{{corso.descrizione}}</p>
+    <br>
+    <p>
+        <b>Data inizio: </b>{{corso.data_inizio}}<br>
+        <b>Data fine: </b>{{corso.data_fine}}<br>
+        <br>
+        <i>Posti disponibili: {{corso.posti_disponibili}}</i>
+    </p>
+ {%endblock content%}

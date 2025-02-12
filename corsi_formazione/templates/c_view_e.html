@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View e {%endblock title%}
+
+{%block content%}
+    <h3>Corsi terminanti il 30/04/2025</h3>
+    <br>
+    <ul>
+        {% for corso in corsi_terminanti_giorno %}
+            <li><a href="{% url 'corsi_formazione:dettagli_corso' corso.id %}">{{corso.titolo}}</a> - finisce il {{corso.data_fine}}</li>
+        {% endfor %}
+    </ul>
+{%endblock content%}
