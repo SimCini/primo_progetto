@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View c {%endblock title%}
+
+{%block content%}
+    <h3>Corsi che iniziano dopo il 01/05/2025</h3>
+    <br>
+    <ul>
+        {% for corso in corsi_data %}
+            <li><a href="{% url 'corsi_formazione:dettagli_corso' corso.id %}">{{corso.titolo}}</a> - {{corso.data_inizio}}</li>
+        {% endfor %}
+    </ul>
+{%endblock content%}

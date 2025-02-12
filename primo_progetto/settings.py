@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'voti',
     'eventi',
     'rubrica',
+    'corsi_formazione',
 
 ]
 

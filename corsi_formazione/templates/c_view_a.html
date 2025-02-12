@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | View a {%endblock title%}
+
+{%block content%}
+    <h3>Corsi ordinati per data di inizio:</h3>
+    <br>
+    <ul>
+        {% for corso in corsi_ordinati %}
+            <li><a href="{% url 'corsi_formazione:dettagli_corso' corso.id %}">{{corso.titolo}}</a> - {{corso.data_inizio}}</li>
+        {% endfor %}
+    </ul>
+{%endblock content%}

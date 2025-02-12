@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Statistiche avanzate {%endblock title%}
+
+{%block content%}
+    <h2>Statistiche avanzate sui corsi</h2>
+    <br>
+    <ul>
+        <li>Corso con più posti disponibili: <a href="{% url 'corsi_formazione:dettagli_corso' corso_posti_maggiori.id %}">{{corso_posti_maggiori.titolo}}</a> con {{corso_posti_maggiori.posti_disponibili}} posti disponibili</li>
+        <li>Corso con meno posti disponibili: <a href="{% url 'corsi_formazione:dettagli_corso' corso_posti_minori.id %}">{{corso_posti_minori.titolo}}</a> con {{corso_posti_minori.posti_disponibili}} posti disponibili</li>
+        <br>
+        <li>Totale posti disponibili: {{totale_posti}}</li>
+    </ul>
+{%endblock content%}
