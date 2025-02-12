@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import pymysql
+pymysql.install_as_MySQLdb()
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -43,7 +45,6 @@ INSTALLED_APPS = [
     'news',
     'voti',
     'eventi',
-    'rubrica',
 
 ]
 
@@ -89,6 +90,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'mydb',
+        #'USER': 'django_user',
+        #'PASSWORD': 'password123',
+        #'HOST': 'localhost',
+        #'PORT': '3306',
+        
+        
     }
 }
 
