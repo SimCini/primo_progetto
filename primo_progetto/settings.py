@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'news',
     'voti',
     'eventi',
+    'rubrica',
 
 ]
 
