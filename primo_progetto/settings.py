@@ -98,7 +98,7 @@ DATABASES = {
         #'USER': 'django_user',
         #'PASSWORD': 'password123',
         #'HOST': 'localhost',
-        #'PORT': '3306', <--da cambiare
+        #'PORT': '3306',
         
         
     }
