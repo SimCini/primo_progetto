@@ -98,7 +98,7 @@ DATABASES = {
         #'USER': 'django_user',
         #'PASSWORD': 'password123',
         #'HOST': 'localhost',
-        #'PORT': '3306', <--da cambiare
+        #'PORT': '3306',
         
         
     }
@@ -145,3 +145,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
