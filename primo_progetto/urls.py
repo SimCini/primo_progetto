@@ -31,5 +31,5 @@ urlpatterns = [
     path('rubrica/',include("rubrica.urls",namespace="rubrica")),
     path('corsi_formazione/',include("corsi_formazione.urls",namespace="corsi_formazione")),
     path('', index_root, name='index_root'),
-
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
