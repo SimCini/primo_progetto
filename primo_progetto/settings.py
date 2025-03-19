@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'eventi',
     'rubrica',
     'corsi_formazione',
+    'forms_app',
+    'crispy_forms',
+    'crispy_bootstrap4',
 
 ]
 
@@ -69,7 +72,8 @@ TEMPLATES = [
                  os.path.join(BASE_DIR, 'templates'),
                  os.path.join(BASE_DIR, 'seconda_app/templates'),
                  os.path.join(BASE_DIR, 'news/templates'),
-                 os.path.join(BASE_DIR, 'voti/templates'),],
+                 os.path.join(BASE_DIR, 'voti/templates'),
+                 os.path.join(BASE_DIR, 'forms_app/templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,3 +153,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
