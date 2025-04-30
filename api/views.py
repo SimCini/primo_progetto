@@ -10,6 +10,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="fe9c1a7abbfb4598a01273
                                                #redirect_uri="http://127.0.0.1:8888/callback",
                                                #redirect_uri="https://ciniltanisimone.eu.pythonanywhere.com:8888/callback",
                                                redirect_uri="https://ciniltanisimone.eu.pythonanywhere.com/callback",
+                                               #redirect_uri="https://ciniltanisimone.eu.pythonanywhere.com:443/callback",
                                                scope=["user-library-read"],
                                                cache_path=".cache"))
 
