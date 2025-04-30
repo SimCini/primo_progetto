@@ -8,7 +8,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="fe9c1a7abbfb4598a01273
                                                client_secret="ba088183e57d405d874fb1239741a02d",
                                                #redirect_uri="http://localhost:8888/callback",
                                                #redirect_uri="http://127.0.0.1:8888/callback",
-                                               redirect_uri="https://ciniltanisimone.eu.pythonanywhere.com:8888/callback",
+                                               #redirect_uri="https://ciniltanisimone.eu.pythonanywhere.com:8888/callback",
+                                               redirect_uri="https://ciniltanisimone.eu.pythonanywhere.com/callback",
                                                scope=["user-library-read"],
                                                cache_path=".cache"))
 
